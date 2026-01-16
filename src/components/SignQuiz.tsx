@@ -77,12 +77,12 @@ export const SignQuiz = () => {
     return (
       <div className="space-y-4">
         <div className="text-center space-y-4">
-          <div className="text-6xl animate-bounce">
+          <div className="text-5xl sm:text-6xl animate-bounce">
             {percentage >= 80 ? '🎉' : percentage >= 60 ? '👍' : '📚'}
           </div>
-          <h3 className="text-2xl font-bold text-gray-800">Результат!</h3>
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl">
-            <p className="text-4xl font-bold text-primary mb-2">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Результат!</h3>
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 sm:p-6 rounded-2xl">
+            <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
               {score} / {questions.length}
             </p>
             <p className="text-gray-600">
@@ -113,19 +113,19 @@ export const SignQuiz = () => {
         </span>
       </div>
 
-      <Card className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <h4 className="text-lg font-bold text-gray-800 text-center mb-6">
+      <Card className="p-4 sm:p-6 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <h4 className="text-base sm:text-lg font-bold text-gray-800 text-center mb-4 sm:mb-6">
           {currentQ.question}
         </h4>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {currentQ.options.map((option) => (
             <Button
               key={option}
               variant={selectedAnswer === option ? 
                 (option === currentQ.correct ? "default" : "destructive") : 
                 "outline"}
-              className={`h-24 text-5xl hover-scale ${
+              className={`h-20 sm:h-24 text-4xl sm:text-5xl hover-scale ${
                 selectedAnswer && option === currentQ.correct ? 'bg-green-500 hover:bg-green-600' : ''
               }`}
               onClick={() => handleAnswer(option)}

@@ -22,17 +22,17 @@ const Index = () => {
       title: 'Добро пожаловать!',
       subtitle: 'Изучаем ПДД весело',
       content: (
-        <div className="text-center space-y-6">
-          <div className="text-8xl pulse-slow">🚗🚦🚸</div>
-          <h2 className="text-3xl font-bold text-gray-800">
+        <div className="text-center space-y-4 sm:space-y-6">
+          <div className="text-6xl sm:text-8xl pulse-slow">🚗🚦🚸</div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
             Правила дорожного движения
           </h2>
-          <p className="text-lg text-gray-600 max-w-md mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-md mx-auto">
             Привет! Я помогу тебе изучить правила дорожного движения. 
             Это важно для твоей безопасности на дороге! 🎓
           </p>
-          <div className="bg-accent p-6 rounded-2xl">
-            <p className="text-base font-medium text-gray-700">
+          <div className="bg-accent p-4 sm:p-6 rounded-2xl">
+            <p className="text-sm sm:text-base font-medium text-gray-700">
               💡 Знание ПДД спасает жизни каждый день!
             </p>
           </div>
@@ -46,8 +46,8 @@ const Index = () => {
       subtitle: 'Что нужно знать',
       content: (
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-gray-800">Что такое ПДД?</h3>
-          <p className="text-base text-gray-600">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Что такое ПДД?</h3>
+          <p className="text-sm sm:text-base text-gray-600">
             Правила дорожного движения — это законы, которые помогают всем 
             участникам движения безопасно передвигаться по дорогам.
           </p>
@@ -596,13 +596,13 @@ const Index = () => {
             </SheetContent>
           </Sheet>
 
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{sections[currentSection].emoji}</span>
-            <div>
-              <h1 className="font-bold text-sm text-gray-800">
+          <div className="flex items-center gap-2 max-w-[60vw] sm:max-w-none">
+            <span className="text-xl sm:text-2xl">{sections[currentSection].emoji}</span>
+            <div className="min-w-0">
+              <h1 className="font-bold text-xs sm:text-sm text-gray-800 truncate">
                 {sections[currentSection].title}
               </h1>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 hidden sm:block">
                 {sections[currentSection].subtitle}
               </p>
             </div>
@@ -612,9 +612,9 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="pt-20 pb-24 px-4">
+      <div className="pt-20 pb-24 px-3 sm:px-4">
         <div className="container mx-auto max-w-2xl">
-          <Card className="p-6 animate-fade-in shadow-lg">
+          <Card className="p-4 sm:p-6 animate-fade-in shadow-lg">
             {sections[currentSection].content}
           </Card>
         </div>

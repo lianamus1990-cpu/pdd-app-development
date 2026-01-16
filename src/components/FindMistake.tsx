@@ -63,9 +63,9 @@ export const FindMistake = () => {
     return (
       <div className="space-y-4">
         <div className="text-center space-y-4">
-          <div className="text-6xl animate-bounce">🎓</div>
-          <h3 className="text-2xl font-bold text-gray-800">Молодец!</h3>
-          <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50">
+          <div className="text-5xl sm:text-6xl animate-bounce">🎓</div>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Молодец!</h3>
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-green-50 to-blue-50">
             <p className="text-lg text-gray-700 mb-2">
               Ты нашёл все ошибки!
             </p>
@@ -95,12 +95,12 @@ export const FindMistake = () => {
         </span>
       </div>
 
-      <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <h4 className="text-lg font-bold text-gray-800 text-center mb-4">
+      <Card className="p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <h4 className="text-base sm:text-lg font-bold text-gray-800 text-center mb-4">
           {scenario.description}
         </h4>
 
-        <div className="text-center text-7xl mb-6 bg-white rounded-xl p-6">
+        <div className="text-center text-5xl sm:text-7xl mb-4 sm:mb-6 bg-white rounded-xl p-4 sm:p-6">
           {scenario.image}
         </div>
 

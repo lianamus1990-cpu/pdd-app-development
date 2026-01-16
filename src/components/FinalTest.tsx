@@ -133,20 +133,20 @@ export const FinalTest = () => {
     return (
       <div className="space-y-4 animate-fade-in">
         <div className="text-center space-y-4">
-          <div className="text-7xl animate-bounce">
+          <div className="text-5xl sm:text-7xl animate-bounce">
             {passed ? '🏆' : '📚'}
           </div>
-          <h3 className="text-2xl font-bold text-gray-800">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
             {passed ? 'Поздравляем!' : 'Продолжай учиться!'}
           </h3>
           
-          <Card className="p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+          <Card className="p-4 sm:p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
             <div className="space-y-4">
               <div className="text-center">
-                <p className="text-6xl font-bold text-primary mb-2">
+                <p className="text-4xl sm:text-6xl font-bold text-primary mb-2">
                   {score} / {questions.length}
                 </p>
-                <p className="text-xl text-gray-600">
+                <p className="text-base sm:text-xl text-gray-600">
                   {percentage.toFixed(0)}% правильных ответов
                 </p>
               </div>
@@ -224,19 +224,19 @@ export const FinalTest = () => {
         </div>
       </div>
 
-      <Card className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <h4 className="text-lg font-bold text-gray-800 mb-6">
+      <Card className="p-4 sm:p-6 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-4 sm:mb-6">
           {question.question}
         </h4>
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {question.options.map((option, index) => (
             <Button
               key={index}
               variant={selectedOption === index ? 
                 (index === question.correct ? "default" : "destructive") : 
                 "outline"}
-              className={`w-full h-auto py-4 px-4 text-left justify-start hover-scale ${
+              className={`w-full h-auto py-3 sm:py-4 px-3 sm:px-4 text-left justify-start hover-scale text-sm sm:text-base ${
                 selectedOption !== null && index === question.correct ? 
                 'bg-green-500 hover:bg-green-600 text-white' : ''
               }`}

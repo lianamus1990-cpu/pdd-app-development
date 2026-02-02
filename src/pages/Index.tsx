@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 import { SignQuiz } from '@/components/SignQuiz';
 import { FindMistake } from '@/components/FindMistake';
 import { FinalTest } from '@/components/FinalTest';
+import { VideoEmbed } from '@/components/VideoEmbed';
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState(0);
@@ -86,6 +87,17 @@ const Index = () => {
                 <p className="text-sm font-medium">Водители</p>
               </div>
             </div>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="font-semibold text-gray-800">📺 Обучающее видео:</h4>
+            <VideoEmbed 
+              url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+              title="Основы ПДД для начинающих"
+            />
+            <p className="text-xs text-gray-500 text-center">
+              Вставьте ссылку на ваше видео из YouTube, VK, Rutube или Яндекс.Дзен
+            </p>
           </div>
         </div>
       ),
